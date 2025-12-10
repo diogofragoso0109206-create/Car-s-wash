@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página de Login</title>
+    <title>Criar Conta</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,25 +12,30 @@
         body {
             background: #f0f2f5;
         }
-        .login-container {
-            max-width: 400px;
-            margin: 80px auto;
+        .register-container {
+            max-width: 450px;
+            margin: 70px auto;
             background: #fff;
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
-        .login-title {
+        .register-title {
             font-weight: 600;
         }
     </style>
 </head>
 <body>
 
-    <div class="login-container">
-        <h3 class="text-center login-title mb-4">Login</h3>
+    <div class="register-container">
+        <h3 class="text-center register-title mb-4">Criar Conta</h3>
 
         <form>
+            <div class="mb-3">
+                <label class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" placeholder="Digite seu nome" required>
+            </div>
+
             <div class="mb-3">
                 <label class="form-label">Email</label>
                 <input type="email" class="form-control" placeholder="Digite seu email" required>
@@ -38,13 +43,18 @@
 
             <div class="mb-3">
                 <label class="form-label">Senha</label>
-                <input type="password" class="form-control" placeholder="Digite sua senha" required>
+                <input type="password" class="form-control" placeholder="Crie uma senha" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Confirmar Senha</label>
+                <input type="password" class="form-control" placeholder="Repita a senha" required>
             </div>
 
             <button type="submit" class="btn btn-primary w-100">Entrar</button>
         </form>
 
-        <p class="text-center mt-3 mb-0">Não tem conta? <a href="criarconta.html">Criar conta</a></p>
+        <p class="text-center mt-3 mb-0">Já tem conta? <a href="login.html">Entrar</a></p>
     </div>
 
     <!-- Bootstrap JS -->
