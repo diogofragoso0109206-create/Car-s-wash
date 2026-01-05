@@ -76,6 +76,7 @@
             </div>
 
         </div>
+        <!--Falta img -->
         <div class="content" style="display: flex; padding-left: 18%;">
             <div class="card-body">
 
@@ -134,8 +135,33 @@
                     <p>Reparação e pintura de volante.</p>
                 </div>
             </div>
-
         </div>
+    </div>
+    <div class="email" class="content">
+        <!-- Formulário de contacto -->
+        <section id="contact" class="content" style="padding: 40px;">
+            <h2>Contacte-nos</h2>
+            <form action="send_email.php" method="post" id="contactForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label"><strong>Nome</strong></label>
+                    <input type="text" class="form-control" id="name" name="name" required maxlength="100">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label"><strong>E‑mail</strong></label>
+                    <input type="email" class="form-control" id="email" name="email" required maxlength="150">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label"><strong>Telefone</strong></label>
+                    <input type="text" class="form-control" id="phone" name="phone" maxlength="30">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label"><strong>Mensagem</strong></label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required
+                        maxlength="2000"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </section>
     </div>
 
 
