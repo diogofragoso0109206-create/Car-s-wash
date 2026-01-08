@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
-        // Remetente e destinatário
+        // pessoa que recebe e destinatário
         $mail->setFrom('no-reply@teudominio.com', 'Garcia CarWash');  // Use um email válido
         $mail->addAddress('diogofragoso206@gmail.com', 'Garcia CarWash');
         $mail->addReplyTo($email, $name);
