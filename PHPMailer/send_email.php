@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = isset($_POST['name']) ? clean($_POST['name']) : '';
     $email = isset($_POST['email']) ? filter_var($_POST['email'], FILTER_SANITIZE_EMAIL) : '';
     $phone = isset($_POST['phone']) ? clean($_POST['phone']) : '';
-    $message = isset($_POST['messages']) ? clean($_POST['messages']) : '';  // Note: campo POST é 'messages'
+    $message = isset($_POST['messages']) ? clean($_POST['messages']) : '';  
 
     // Validações básicas
     if (empty($name) || empty($email) || empty($phone) || empty($message) || 
@@ -31,13 +31,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';        // servidor SMTP
         $mail->SMTPAuth = true;
-        $mail->Username = getenv('SMTP_USERNAME') ?: 'seu-email@gmail.com'; // Substitua ou use env
-        $mail->Password = getenv('SMTP_PASSWORD') ?: 'sua-senha-app';      // Substitua ou use env
+        $mail->Username = getenv('SMTP_USERNAME') ?: 'seu-email@gmail.com'; 
+        $mail->Password = getenv('SMTP_PASSWORD') ?: 'sua-senha-app';      
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         // pessoa que recebe e destinatário
-        $mail->setFrom('no-reply@teudominio.com', 'Garcia CarWash');  // Use um email válido
+        $mail->setFrom('no-reply@teudominio.com', 'Garcia CarWash');  
         $mail->addAddress('diogofragoso206@gmail.com', 'Garcia CarWash');
         $mail->addReplyTo($email, $name);
 
